@@ -1,4 +1,4 @@
-package leetcode.editor.sort;
+package leetcode.editor.datastruct.heap;
 
 import static leetcode.editor.sort.SortTestHelper.swap;
 

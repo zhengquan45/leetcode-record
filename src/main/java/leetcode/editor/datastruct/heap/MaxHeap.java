@@ -1,4 +1,4 @@
-package leetcode.editor.sort;
+package leetcode.editor.datastruct.heap;
 
 import static leetcode.editor.sort.SortTestHelper.swap;
 
@@ -34,15 +34,22 @@ public class MaxHeap<Item extends Comparable> {
         return count == 0;
     }
 
-    void insert(Item item) {
+    public void insert(Item item) {
         if (count + 1 > capacity) {
-            throw new IllegalStateException("capacity is not enough ! need resize");
+            resize();
         }
         data[++count] = item;
         shiftUp(count);
     }
 
-    Item extractMax() {
+    private void resize() {
+        capacity = 2 * capacity + 1;
+        Item[] newData = (Item[]) new Comparable[capacity];
+        System.arraycopy(data, 0, newData, 0, data.length);
+        data = newData;
+    }
+
+    public Item extractMax() {
         if (count <= 0) {
             throw new IllegalStateException("heap has no element");
         }

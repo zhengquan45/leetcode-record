@@ -1,5 +1,7 @@
 package leetcode.editor.sort;
 
+import leetcode.editor.datastruct.heap.MaxHeap;
+import leetcode.editor.datastruct.heap.PrintableMaxHeap;
 import org.junit.jupiter.api.Test;
 
 public class MaxHeapTest {
@@ -20,13 +22,16 @@ public class MaxHeapTest {
 
     @Test
     public void heapSort() {
-        MaxHeap maxHeap = new MaxHeap(10000);
-        int N = 10000;
+        MaxHeap maxHeap = new MaxHeap(5);
+        int N = 10;
         int[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
         for (int i : arr1) {
             maxHeap.insert(i);
         }
+        for (int i = 0; i < N; i++) {
+            Integer num = (Integer) maxHeap.extractMax();
+            System.out.print(num + " ");
+        }
 
-        maxHeap.extractMax();
     }
 }

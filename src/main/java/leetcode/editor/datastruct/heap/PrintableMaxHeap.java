@@ -1,4 +1,4 @@
-package leetcode.editor.sort;
+package leetcode.editor.datastruct.heap;
 
 // 我们的PrintableMaxHeap只能处理整数信息，所以继承的是MaxHeap<Comparable<Integer>>
 public class PrintableMaxHeap extends MaxHeap{
@@ -19,7 +19,7 @@ public class PrintableMaxHeap extends MaxHeap{
         System.out.println("Data in the max heap: ");
         for( int i = 1 ; i <= size() ; i ++ ){
             // 我们的print函数要求堆中的所有整数在[0, 100)的范围内
-            assert data[i] >= 0 && (Integer)data[i] < 100;
+            assert data[i].compareTo(0) >= 0 && (Integer) data[i] < 100;
             System.out.print(data[i] + " ");
         }
         System.out.println();
