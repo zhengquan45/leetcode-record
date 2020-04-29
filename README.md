@@ -46,6 +46,9 @@ https://coding.imooc.com/learn/questiondetail/182768.html
 - [ ] 二项堆
 - [ ] 斐波那契堆
 
+- [] 关于跳表skip tree
+- [] 关于字典树和它的变种 tire tree and radix tree
+
 #### leetocde 日志
 
 ##### easy

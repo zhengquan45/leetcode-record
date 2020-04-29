@@ -43,7 +43,7 @@ public class MinHeap<Item extends Comparable> {
         shiftUp(count);
     }
 
-    Item extractMax() {
+    Item extractMin() {
         if (count <= 0) {
             throw new IllegalStateException("heap has no element");
         }
